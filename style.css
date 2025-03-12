@@ -92,6 +92,8 @@ h6 {
 h1 {
   font-family: 'Norse Bold';
   font-size: 3rem;
+  text-shadow: -2px 2px 0 #000, -2px 2px 0 #2d3e52, -2px 2px 0 #2d3e52,
+    -2px 2px 0 #2d3e52;
 }
 
 /*
@@ -107,6 +109,23 @@ section {
   height: 100%;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+section::before {
+  content: '';
+  background: rgb(63, 88, 110);
+  background: linear-gradient(
+    0deg,
+    rgba(63, 88, 110, 1) 0%,
+    rgba(75, 117, 132, 1) 35%,
+    rgba(98, 213, 196, 1) 100%
+  );
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .image-section {
@@ -145,4 +164,34 @@ form div {
   display: flex;
   flex-direction: column;
   min-width: 200px;
+}
+
+input {
+  all: unset;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 0px;
+  background-color: white;
+  color: black;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input:invalid {
+  border: 2px solid #ff4d4d;
+}
+
+input:valid {
+  border: 2px solid #66bb6a;
+}
+
+input:focus {
+  border: 2px solid #4a90e2;
+}
+
+a {
+  color: #4a90e2;
 }
