@@ -1,3 +1,20 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* norse-bold - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Norse Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/Norse-Bold\(1\).otf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -8,6 +25,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  font-family: 'Inter';
 }
 
 body {
@@ -55,7 +73,13 @@ h6 {
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
+  width: 60ch;
+  max-width: 100%;
+  line-height: calc(1ex / 0.32);
+  text-align: justify;
+  hyphens: auto;
 }
+
 h1,
 h2,
 h3,
@@ -63,6 +87,11 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+h1 {
+  font-family: 'Norse Bold';
+  font-size: 3rem;
 }
 
 /*
@@ -80,6 +109,10 @@ section {
   align-items: center;
 }
 
+.image-section {
+  flex-direction: column;
+}
+
 .form-section {
   flex-basis: 70%;
   flex-direction: column;
@@ -87,6 +120,10 @@ section {
   justify-content: center;
   align-items: center;
   padding: 80px;
+}
+
+.form-section p:nth-child(2) {
+  margin-top: 24px;
 }
 
 .image-section {
