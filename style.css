@@ -1,19 +1,19 @@
 /* inter-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/inter-v18-latin-regular.woff2') format('woff2');
 }
 
-/* norse-bold - latin */
+/* norse-bold */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Norse Bold';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/Norse-Bold\(1\).otf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/Norse-Bold\(1\).otf') format('opentype');
 }
 /* 1. Use a more-intuitive box-sizing model */
 *,
@@ -106,7 +106,7 @@ h1 {
   --main-background-color: #2d3e52;
   --secondary-background-color: #62d5c4;
   --valid-color: #66bb6a;
-  --validation-fail: #ff0000;
+  --invalid-color: #ff0000;
   --focus-color: #4a90e2;
   --section-left-right-padding: 32px;
   --section-top-bottom-padding: clamp(80px, 5vw, 56px);
@@ -164,7 +164,6 @@ form {
 form div {
   display: flex;
   flex: 1 1 calc(50% - 24px);
-  display: flex;
   flex-direction: column;
 }
 
@@ -215,4 +214,20 @@ a {
   .image-section {
     min-height: 20vh;
   }
+}
+
+button {
+  background-color: var(--main-background-color);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  max-width: 50%;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-background-color);
+  color: black;
+  border-color: var(--secondary-background-color);
 }

@@ -25,13 +25,14 @@
               >First Name <span aria-label="required">*</span></label
             >
             <input
-              id="first-name"
+              id="first"
               name=""
               type="text"
               placeholder="Bilbo"
               required
               minlength="1"
               maxlength="25"
+              autocomplete="given-name"
             />
           </div>
           <div>
@@ -40,10 +41,13 @@
             >
             <input
               id="last-name"
-              name="first-name-form"
+              name="last-name"
               type="text"
               placeholder="Baggins"
               required
+              minlength="1"
+              maxlength="25"
+              autocomplete="family-name"
             />
           </div>
           <div>
@@ -52,10 +56,11 @@
             >
             <input
               id="email"
-              name="email-form"
+              name="email"
               type="email"
               placeholder="bilbo@theshire.com"
               required
+              autocomplete="email"
             />
           </div>
           <div>
@@ -64,12 +69,13 @@
             >
             <input
               id="phone-number"
-              name="phone-number-phone"
+              name="phone-number"
               type="tel"
               placeholder="(111)-2941"
               minlength="7"
               maxlength="10"
               required
+              autocomplete="tel"
             />
           </div>
           <div>
@@ -78,7 +84,7 @@
             >
             <input
               id="password"
-              name="password-form"
+              name="password"
               type="password"
               minlength="12"
               maxlength="24"
@@ -91,7 +97,7 @@
             >
             <input
               id="password-confirm"
-              name="password-confirm-form"
+              name="password-confirm"
               type="password"
               minlength="12"
               maxlength="24"
@@ -99,7 +105,9 @@
             />
           </div>
           <div>
-            <button type="submit">Create Account</button>
+            <button aria-label="Create Account" type="submit">
+              Create Account
+            </button>
             <p>Already have an account? <a href="#">Log in</a></p>
           </div>
         </form>
