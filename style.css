@@ -92,6 +92,9 @@ h1 {
   font-size: 3rem;
   text-shadow: -2px 2px 0 #2d3e52, -2px 2px 0 #2d3e52, -2px 2px 0 #2d3e52,
     -2px 2px 0 #2d3e52;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 /*
